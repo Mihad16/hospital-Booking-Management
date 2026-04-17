@@ -7,6 +7,14 @@
 </head>
 <body>
     <h1>Welcome to Homepage</h1>
-    <p>Your content here</p>
+{% if num1 > 11 %}
+<h2> Postive Number</h2>
+
+{% elif num1 < -1   %} 
+   <h2>Negative Number</h2>
+{% else  %}
+    <p>number Zero </p>
+{% endif %}
+
 </body>
 </html>

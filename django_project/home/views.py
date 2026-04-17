@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
+
+numbers ={
+    'num1': 0,
+    
+ }
+ 
 def index(request):
-   return render(request,'index.html')
+   return render(request,'index.html', numbers)
 
 
 def doctors(request):
