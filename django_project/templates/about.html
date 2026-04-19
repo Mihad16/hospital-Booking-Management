@@ -1,8 +1,319 @@
-{% extends 'base.html' %}   
+{% extends 'base.html' %}
+{% load static %}
 
-{% block title %}About Us{% endblock %}
+{% block title %}About Us | MediCare{% endblock %}
 
 {% block content %}
-    <h1>About Us</h1>
-    <p>Your content here</p>
+
+<!-- Hero Section -->
+<div class="about-hero">
+    <div class="container py-5">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold text-white mb-3">About Us</h1>
+                <div class="hero-divider mx-auto my-3"></div>
+                <p class="lead text-white-50">Compassionate care. Medical excellence. Since 2010.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="container py-5">
+    <!-- Our Story Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 mb-3">
+                <i class="fas fa-heartbeat me-1"></i> Our Story
+            </span>
+            <h2 class="display-6 fw-bold mb-3">Leading Healthcare Provider</h2>
+            <p class="lead text-muted">Dedicated to your health and well-being with cutting-edge medical technology.</p>
+            <p class="text-muted">Founded in 2010, MediCare has grown from a small clinic to a premier healthcare institution serving thousands of patients annually. Our commitment to excellence and patient-centered care sets us apart.</p>
+            <p class="text-muted">We believe that everyone deserves access to quality healthcare. That's why we've built a team of experienced professionals and invested in state-of-the-art facilities.</p>
+            
+            <div class="row mt-4">
+                <div class="col-6">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fas fa-check-circle text-primary fa-2x"></i>
+                        <div>
+                            <h5 class="mb-0">15+ Years</h5>
+                            <small class="text-muted">Of Excellence</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fas fa-user-md text-primary fa-2x"></i>
+                        <div>
+                            <h5 class="mb-0">50+ Experts</h5>
+                            <small class="text-muted">Qualified Doctors</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="about-image-wrapper">
+                <img src="{% static 'images/hospital.jpeg' %}" alt="Medical Clinic" class="img-fluid rounded-4 shadow-lg">
+                <div class="floating-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>24/7 Emergency Care</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="row g-4 my-5">
+        <div class="col-md-6">
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To provide exceptional, compassionate healthcare to our community through innovation, expertise, and personalized attention.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="vision-card">
+                <div class="vision-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To be the most trusted healthcare provider, setting new standards in medical excellence and patient satisfaction.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Values Section -->
+    <div class="text-center my-5">
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 mb-3">
+            <i class="fas fa-gem me-1"></i> Our Core Values
+        </span>
+        <h2 class="display-6 fw-bold mb-4">What We Believe In</h2>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-3 col-sm-6">
+            <div class="value-card">
+                <i class="fas fa-heart text-primary fa-3x mb-3"></i>
+                <h5>Compassion</h5>
+                <p>Treating every patient with empathy and respect.</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="value-card">
+                <i class="fas fa-flask text-primary fa-3x mb-3"></i>
+                <h5>Innovation</h5>
+                <p>Embracing cutting-edge medical technology.</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="value-card">
+                <i class="fas fa-shield-alt text-primary fa-3x mb-3"></i>
+                <h5>Integrity</h5>
+                <p>Honest and transparent healthcare.</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="value-card">
+                <i class="fas fa-users text-primary fa-3x mb-3"></i>
+                <h5>Excellence</h5>
+                <p>Striving for the best outcomes always.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Counter -->
+    <div class="stats-section my-5">
+        <div class="row g-4 text-center py-4">
+            <div class="col-md-3 col-6">
+                <div class="stat-box">
+                    <h2 class="display-4 fw-bold text-primary">10k+</h2>
+                    <p class="text-muted">Happy Patients</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-box">
+                    <h2 class="display-4 fw-bold text-primary">50+</h2>
+                    <p class="text-muted">Expert Doctors</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-box">
+                    <h2 class="display-4 fw-bold text-primary">24/7</h2>
+                    <p class="text-muted">Emergency Care</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-box">
+                    <h2 class="display-4 fw-bold text-primary">15+</h2>
+                    <p class="text-muted">Years of Service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section text-center py-5 mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h3 class="fw-bold mb-3">Ready to experience quality healthcare?</h3>
+                <p class="text-muted mb-4">Book an appointment with our expert doctors today.</p>
+                <a href="#" class="btn btn-primary btn-lg rounded-pill px-5">
+                    <i class="fas fa-calendar-alt me-2"></i>Book Appointment
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Hero Section */
+    .about-hero {
+        background: linear-gradient(135deg, #0d6efd, #0a58ca);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .about-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') repeat-x bottom;
+        background-size: cover;
+        opacity: 0.5;
+    }
+    
+    .hero-divider {
+        width: 60px;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+    }
+    
+    /* Mission & Vision Cards */
+    .mission-card, .vision-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        border: 1px solid #e9ecef;
+        height: 100%;
+    }
+    
+    .mission-card:hover, .vision-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(13,110,253,0.1);
+        border-color: #0d6efd;
+    }
+    
+    .mission-icon, .vision-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.2rem auto;
+    }
+    
+    .mission-icon i, .vision-icon i {
+        font-size: 2rem;
+        color: white;
+    }
+    
+    /* Value Cards */
+    .value-card {
+        background: #f8f9fa;
+        border-radius: 16px;
+        padding: 1.8rem 1.2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+    
+    .value-card:hover {
+        background: white;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transform: translateY(-3px);
+    }
+    
+    .value-card p {
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-bottom: 0;
+    }
+    
+    /* Stats Section */
+    .stats-section {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        border-radius: 30px;
+        padding: 1rem;
+    }
+    
+    .stat-box {
+        padding: 1rem;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+        background: #f8f9fa;
+        border-radius: 30px;
+    }
+    
+    /* About Image */
+    .about-image-wrapper {
+        position: relative;
+    }
+    
+    .floating-card {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        background: white;
+        padding: 1rem 1.5rem;
+        border-radius: 50px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .floating-card i {
+        color: #0d6efd;
+        font-size: 1.5rem;
+    }
+    
+    .floating-card span {
+        font-weight: 600;
+        color: #1a2a4f;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .display-4 {
+            font-size: 2rem;
+        }
+        
+        .display-6 {
+            font-size: 1.5rem;
+        }
+        
+        .floating-card {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+    }
+</style>
+
 {% endblock %}

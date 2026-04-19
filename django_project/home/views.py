@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 from . models import Department,Doctor
+from . forms import BookingForm
 # Create your views here.
 
 numbers ={
@@ -22,7 +23,17 @@ def about(request):
    return render(request,'about.html')
 
 def booking(request):
-   return render(request,'booking.html')
+   form = BookingForm()
+   if request.method == 'POST':
+      form =BookingForm(request.POST)
+      if form.is_valid():
+         form.save()
+     
+      form = BookingForm()
+
+   return render(request,'booking.html', {'form': form})
+   
+
 
 def contact(request):
    return render(request,'contact.html')
