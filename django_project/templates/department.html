@@ -2,5 +2,13 @@
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
-    <h1 style="color: orange;">Hello from department Html</h1>
-{% endblock %}
+<h1 class="text-center pt-3"> OurDepartment </h1>
+<hr>
+
+ {% for d in dict_dept %}
+<div class="p-3 my-3 text-center text-white bg-primary border border-info rounded w-50 mx-auto shadow-sm">
+    <h3>{{ d.dep_name }}</h3>
+    <p>{{ d.dep_description }}</p>
+</div>
+{% endfor %}
+{% endblock %}  
