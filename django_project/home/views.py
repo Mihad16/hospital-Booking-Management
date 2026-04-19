@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from . models import Department
+from . models import Department,Doctor
 # Create your views here.
 
 numbers ={
@@ -13,7 +13,9 @@ def index(request):
 
 
 def doctors(request):
-   return render(request,'doctors.html')
+   doctors = Doctor.objects.all()
+   return render(request,'doctors.html', {'dict_doc' : doctors})  
+ 
 
 
 def about(request):

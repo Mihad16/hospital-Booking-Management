@@ -1,7 +1,50 @@
-{% extends "base.html" %}   
-
-{% block title %}Doctors Page{% endblock %}
-
+{% extends 'base.html' %}
+{% load static %}
 {% block content %}
-    <h1 style="color: green;">Hello from doctors Html</h1>
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Our Doctors</h1>
+
+    <div class="row">
+        {% for d in dict_doc %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <img src="{{ d.dep_image.url }}" 
+                     class="card-img-top"
+                     style="width: 100%; height: 280px; object-fit: cover; object-position: center top;" 
+                     alt="{{ d.doc_name }}">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title text-primary">{{ d.doc_name }}</h5>
+                    <h6 class="card-text small text-secondary ">{{ d.doc_specialty }}</h6>
+                     <p class="card-text text-muted ">{{ d.dep_name }}</p>
+
+                    <a href="#" class="btn btn-primary btn-sm rounded-pill px-4">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info text-center">No doctors available at the moment.</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    }
+    .card-img-top {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+</style>
+
 {% endblock %}
